@@ -63,7 +63,7 @@ def p4_build_cmd(cmd):
     location. It means that hooking into the environment, or other configuration
     can be done more easily.
     """
-    real_cmd = ["p4"]
+    real_cmd = ["p4", "-Q", "utf8"]
 
     user = gitConfig("git-p4.user")
     if len(user) > 0:
